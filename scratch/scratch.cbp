@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="scratch" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/scratch" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/scratch" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="BBAlgorithms.cpp" />
+		<Unit filename="BBAlgorithms.h" />
+		<Unit filename="BBConstructor.cpp" />
+		<Unit filename="BBConstructor.h" />
+		<Unit filename="BBExceptions.cpp" />
+		<Unit filename="BBExceptions.h" />
+		<Unit filename="BBFunctionPointers.cpp" />
+		<Unit filename="BBFunctionPointers.h" />
+		<Unit filename="BBOverloading" />
+		<Unit filename="BBOverloading.cpp" />
+		<Unit filename="BBOverloading.h" />
+		<Unit filename="BBPolymorphism.cpp" />
+		<Unit filename="BBPolymorphism.h" />
+		<Unit filename="BBTemplates.cpp" />
+		<Unit filename="BBTemplates.h" />
+		<Unit filename="SimpleList.cpp" />
+		<Unit filename="SimpleList.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<lib_finder disable_auto="1" />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

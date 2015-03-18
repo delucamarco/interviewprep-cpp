@@ -1,0 +1,56 @@
+# depslib dependency file v1.0
+1426261162 source:/home/mdeluca/training/cpp/scratch/main.cpp
+	<iostream>
+	"BBTemplates.h"
+
+1426235904 /home/mdeluca/training/cpp/scratch/SimpleList.h
+
+1426235933 source:/home/mdeluca/training/cpp/scratch/SimpleList.cpp
+	<iostream>
+	"SimpleList.h"
+
+1426245393 /home/mdeluca/training/cpp/scratch/BBExceptions.h
+
+1426245614 source:/home/mdeluca/training/cpp/scratch/BBExceptions.cpp
+	<iostream>
+	"BBExceptions.h"
+
+1426259739 source:/home/mdeluca/training/cpp/scratch/BBAlgorithms.cpp
+	"BBAlgorithms.h"
+	<iostream>
+	<list>
+	<algorithm>
+	<vector>
+	<functional>
+
+1426258918 /home/mdeluca/training/cpp/scratch/BBAlgorithms.h
+
+1426249840 /home/mdeluca/training/cpp/scratch/BBConstructor.h
+
+1426249828 source:/home/mdeluca/training/cpp/scratch/BBConstructor.cpp
+	<iostream>
+	"BBConstructor.h"
+
+1426242332 source:/home/mdeluca/training/cpp/scratch/BBFunctionPointers.cpp
+	"BBFunctionPointers.h"
+
+1426241508 /home/mdeluca/training/cpp/scratch/BBFunctionPointers.h
+
+1426247631 /home/mdeluca/training/cpp/scratch/BBOverloading.h
+	<iostream>
+
+1426247721 source:/home/mdeluca/training/cpp/scratch/BBOverloading.cpp
+	<iostream>
+	"BBOverloading.h"
+
+1426260153 source:/home/mdeluca/training/cpp/scratch/BBPolymorphism.cpp
+	<iostream>
+	"BBPolymorphism.h"
+
+1426260281 /home/mdeluca/training/cpp/scratch/BBPolymorphism.h
+
+1426251024 source:/home/mdeluca/training/cpp/scratch/BBTemplates.cpp
+	"BBTemplates.h"
+
+1426261642 /home/mdeluca/training/cpp/scratch/BBTemplates.h
+
