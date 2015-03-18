@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1426702053 source:/home/mdeluca/training/interviewprep-cpp/trunk/algorithms/Common.cpp
+	"Common.h"
+
+1426689284 /home/mdeluca/training/interviewprep-cpp/trunk/algorithms/Common.h
+	<sys/time.h>
+	<stddef.h>
+
+1426716301 source:/home/mdeluca/training/interviewprep-cpp/trunk/algorithms/main.cpp
+	<iostream>
+	<iomanip>
+	<limits>
+	<stdlib.h>
+	<time.h>
+	"Common.h"
+
