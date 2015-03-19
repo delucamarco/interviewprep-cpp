@@ -1,6 +1,8 @@
 #include <iostream>
 #include <iomanip>
+#include <locale>
 #include <limits>
+#include <cmath>
 #include <stdlib.h>     /* srand, rand */
 #include <time.h>       /* time */
 
@@ -128,6 +130,44 @@ void merge_sort(int* A, int length)
     merge_sort(A, 1, length);
 }
 
+int quick_partition(int* A, int p, int r)
+{
+    int x=A[r-1];
+    int i=p-1;
+    int temp;
+
+    for (int j=p; j<=r-1; ++j)
+    {
+        if (A[j-1]<=x)
+        {
+            ++i;
+            temp=A[i-1];
+            A[i-1]=A[j-1];
+            A[j-1]=temp;
+        }
+    }
+    temp=A[i];
+    A[i]=A[r-1];
+    A[r-1]=temp;
+
+    return i+1;
+}
+
+void quick_sort(int* A, int p, int r)
+{
+    if (p<r)
+    {
+        int q=quick_partition(A, p, r);
+        quick_sort(A, p, q-1);
+        quick_sort(A, q+1, r);
+    }
+}
+
+void quick_sort(int* A, int length)
+{
+    quick_sort(A, 1, length);
+}
+
 void print_array(int* A, int length)
 {
     for (int i=0; i<length; ++i)
@@ -135,12 +175,71 @@ void print_array(int* A, int length)
     std::cout<<std::endl;
 }
 
-void init_array(int* &a, int N)
+double normal(double mu, double sigma)
 {
-    a = new int[N];
-    for (int i=0; i<N; ++i)
+	const double epsilon = std::numeric_limits<double>::min();
+	const double two_pi = 2.0*3.14159265358979323846;
+	const double ee = 1.0 / RAND_MAX;
+
+	static double z0, z1;
+	static bool generate;
+	generate = !generate;
+
+	if (!generate)
+	   return z1 * sigma + mu;
+
+	double u1, u2;
+	do
+	 {
+	   u1 = rand() * ee;
+	   u2 = rand() * ee;
+	 }
+	while ( u1 <= epsilon );
+
+	const double l=-2.0*log(u1);
+	const double r=two_pi * u2;
+
+	z0 = sqrt(l) * cos(r);
+	z1 = sqrt(l) * sin(r);
+	return z0 * sigma + mu;
+}
+
+void init_array(int* &a, int N, int mode=0)
+{
+    switch (mode)
     {
-        a[i] = rand() % N;
+    case 1:
+        {
+            // normal
+            const double k = RAND_MAX/6.0;
+            a = new int[N];
+            for (int i=0; i<N; ++i)
+            {
+                double d=normal(0.0, 1.0);
+                int x=0;
+                if (d>=3.0)
+                {
+                    x=RAND_MAX;
+                }
+                else if (d<3.0 && d>-3.0)
+                {
+                    x=(d+3.0)*k;
+                }
+                a[i] = x;
+            }
+        }
+        break;
+    case 0:
+    default:
+        {
+            // uniform
+            a = new int[N];
+            for (int i=0; i<N; ++i)
+            {
+                a[i] = rand() % N;
+            }
+        }
+        break;
     }
 }
 
@@ -164,6 +263,16 @@ void small_test_merge()
     print_array(A, N);
 }
 
+void small_test_quick()
+{
+    const int N=8;
+    int A[] = {2, 8, 7, 1, 3, 5, 6, 4};
+
+    print_array(A, N);
+    quick_sort(A, N);
+    print_array(A, N);
+}
+
 double large_test(const int* _A, int N, int type)
 {
     common::Chronometer c;
@@ -183,6 +292,9 @@ double large_test(const int* _A, int N, int type)
     case 2:
         merge_sort(A, N);
         break;
+    case 3:
+        quick_sort(A, N);
+        break;
     default:
         std::cerr << "Unknown sort type" <<std::endl;
         delete A;
@@ -196,28 +308,33 @@ double large_test(const int* _A, int N, int type)
 
 void one_step(int N)
 {
+    const int S=3;
+    const int sortType[S] = {
+        0,  // 0: heap
+        2,  // 2: merge
+        3   // 3: quick
+    };
     int* A;
     double elapsed;
 
-    init_array(A, N);
+    init_array(A, N, 0);    // 0: uniform; 1: gaussian
 
+    std::cout.imbue(std::locale("en_US.UTF-8"));
     std::cout << std::setw(12) << N;
-    elapsed = large_test(A, N, 0);  // 0: heap
-    std::cout << ",\t" << std::setw(12) <<std::setprecision(3) << elapsed;
-    elapsed = large_test(A, N, 2);  // 2: merge
-    std::cout << ",\t" << std::setw(12) <<std::setprecision(3)<< elapsed;
-    //elapsed = large_test(A, N, 1);  // 1: insertion
-    elapsed=0;
-    std::cout << ",\t" << std::setw(12) <<std::setprecision(3)<< elapsed;
 
-    std::cout<<std::endl;
+    for (int s=0; s<S; ++s)
+    {
+        elapsed = large_test(A, N, sortType[s]);
+        std::cout << "\t" << std::setw(12) <<std::setprecision(3) << elapsed;
+    }
 
     delete A;
+    std::cout<<std::endl;
 }
 
 int main()
 {
-    const int NTests=25;
+    const int NTests=19;
     int tests[] = {     10, 20, 50,
                         100, 200, 500,
                         1000, 2000, 5000,
@@ -231,9 +348,9 @@ int main()
     srand(time(NULL));
 
     std::cout<<std::setw(12)<<"N";
-    std::cout<<",\t" << std::setw(12) << "HEAP";
-    std::cout<<",\t" << std::setw(12) << "MERGE";
-    std::cout<<",\t" << std::setw(12) << "INSERTION";
+    std::cout<<"\t" << std::setw(12) << "HEAP";
+    std::cout<<"\t" << std::setw(12) << "MERGE";
+    std::cout<<"\t" << std::setw(12) << "QUICK";
     std::cout<<std::endl;
 
     for (int i=0; i<NTests; ++i)
