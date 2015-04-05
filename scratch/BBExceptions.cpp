@@ -8,7 +8,7 @@ namespace brainbench
         try
         {
             Derived* derived = new Derived();
-            throw derived;
+            throw derived;  /// throw pointer
         }
         catch (Derived)
         {
@@ -37,7 +37,26 @@ namespace brainbench
         try
         {
             Derived de;
-            throw &de;
+            throw &de;      /// throw pointer
+        }
+        catch (Base &)
+        {
+            std::cout<<"Base caught in MyFunc" << std::endl;
+            throw;
+        }
+        catch (Derived &)
+        {
+            std::cout<<"Derived caught in MyFunc" << std::endl;
+            throw;
+        }
+    }
+
+    void MyFunc2()
+    {
+        try
+        {
+            Derived de;
+            throw de;   /// throw by value
         }
         catch (Base &)
         {
@@ -70,4 +89,25 @@ namespace brainbench
             std::cout<<"Unhandled exception caught in testExceptions2" << std::endl;
         }
     }
+
+    void testExceptions3()
+    {
+        try
+        {
+            MyFunc2();
+        }
+        catch (Derived &)
+        {
+            std::cout<<"Derived caught in testExceptions3" << std::endl;
+        }
+        catch (Base &)
+        {
+            std::cout<<"Base caught in testExceptions3" << std::endl;
+        }
+        catch (...)
+        {
+            std::cout<<"Unhandled exception caught in testExceptions3" << std::endl;
+        }
+    }
+
 }

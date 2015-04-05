@@ -70,6 +70,8 @@ namespace brainbench
 
         it=std::find_if(L.begin(), L.end(), std::bind2nd(std::less<int>(), 40));
         std::cout << *it << std::endl;
+
+        std::cout<< *max_element(L.begin(), L.end());
     }
 }
 

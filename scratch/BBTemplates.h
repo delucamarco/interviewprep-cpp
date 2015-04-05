@@ -34,6 +34,7 @@ namespace brainbench
     };
 
     void testTemplates();
+    void testTemplates2();
 }
 
 #endif // BRAINBENCH_TEMPLATES_H

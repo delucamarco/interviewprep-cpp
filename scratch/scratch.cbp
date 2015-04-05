@@ -40,6 +40,7 @@
 		<Unit filename="BBExceptions.h" />
 		<Unit filename="BBFunctionPointers.cpp" />
 		<Unit filename="BBFunctionPointers.h" />
+		<Unit filename="BBHeaders.h" />
 		<Unit filename="BBOverloading" />
 		<Unit filename="BBOverloading.cpp" />
 		<Unit filename="BBOverloading.h" />

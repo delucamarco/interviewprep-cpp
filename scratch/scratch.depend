@@ -54,3 +54,67 @@
 
 1426261642 /home/mdeluca/training/cpp/scratch/BBTemplates.h
 
+1427350035 source:/home/mdeluca/training/interviewprep-cpp/trunk/scratch/BBAlgorithms.cpp
+	"BBAlgorithms.h"
+	<iostream>
+	<list>
+	<algorithm>
+	<vector>
+	<functional>
+
+1426669643 /home/mdeluca/training/interviewprep-cpp/trunk/scratch/BBAlgorithms.h
+
+1426669643 source:/home/mdeluca/training/interviewprep-cpp/trunk/scratch/BBConstructor.cpp
+	<iostream>
+	"BBConstructor.h"
+
+1426669643 /home/mdeluca/training/interviewprep-cpp/trunk/scratch/BBConstructor.h
+
+1427348996 source:/home/mdeluca/training/interviewprep-cpp/trunk/scratch/BBExceptions.cpp
+	<iostream>
+	"BBExceptions.h"
+
+1427315586 /home/mdeluca/training/interviewprep-cpp/trunk/scratch/BBExceptions.h
+
+1426669643 source:/home/mdeluca/training/interviewprep-cpp/trunk/scratch/BBFunctionPointers.cpp
+	"BBFunctionPointers.h"
+
+1426669643 /home/mdeluca/training/interviewprep-cpp/trunk/scratch/BBFunctionPointers.h
+
+1426669643 source:/home/mdeluca/training/interviewprep-cpp/trunk/scratch/BBOverloading.cpp
+	<iostream>
+	"BBOverloading.h"
+
+1426669643 /home/mdeluca/training/interviewprep-cpp/trunk/scratch/BBOverloading.h
+	<iostream>
+
+1426669643 source:/home/mdeluca/training/interviewprep-cpp/trunk/scratch/BBPolymorphism.cpp
+	<iostream>
+	"BBPolymorphism.h"
+
+1426669643 /home/mdeluca/training/interviewprep-cpp/trunk/scratch/BBPolymorphism.h
+
+1427316089 source:/home/mdeluca/training/interviewprep-cpp/trunk/scratch/BBTemplates.cpp
+	"BBTemplates.h"
+	<iostream>
+
+1427315902 /home/mdeluca/training/interviewprep-cpp/trunk/scratch/BBTemplates.h
+
+1426669643 source:/home/mdeluca/training/interviewprep-cpp/trunk/scratch/SimpleList.cpp
+	<iostream>
+	"SimpleList.h"
+
+1426669643 /home/mdeluca/training/interviewprep-cpp/trunk/scratch/SimpleList.h
+
+1427348954 source:/home/mdeluca/training/interviewprep-cpp/trunk/scratch/main.cpp
+	<iostream>
+	<fstream>
+	<cstring>
+	<string>
+	<algorithm>
+	<vector>
+	"BBHeaders.h"
+
+1427348969 /home/mdeluca/training/interviewprep-cpp/trunk/scratch/BBHeaders.h
+	<string>
+

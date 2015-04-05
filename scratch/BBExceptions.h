@@ -10,6 +10,7 @@ namespace brainbench
     static void MyFunc();
     void testExceptions();
     void testExceptions2();
+    void testExceptions3();
 }
 
 #endif // BRAINBENCH_EXCEPTIONS_H

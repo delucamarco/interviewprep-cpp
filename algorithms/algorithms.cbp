@@ -25,6 +25,7 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add library="libcppunit" />
 				</Linker>
 			</Target>
 		</Build>
@@ -34,6 +35,12 @@
 		</Compiler>
 		<Unit filename="Common.cpp" />
 		<Unit filename="Common.h" />
+		<Unit filename="DataStructures.cpp" />
+		<Unit filename="DataStructures.h" />
+		<Unit filename="Heap.cpp" />
+		<Unit filename="Heap.h" />
+		<Unit filename="Sort.cpp" />
+		<Unit filename="Sort.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<envvars />
