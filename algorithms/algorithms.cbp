@@ -33,6 +33,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="BinaryTree.cpp" />
+		<Unit filename="BinaryTree.h" />
 		<Unit filename="Common.cpp" />
 		<Unit filename="Common.h" />
 		<Unit filename="DataStructures.cpp" />
