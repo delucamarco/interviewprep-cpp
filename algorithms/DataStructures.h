@@ -6,6 +6,7 @@
 namespace datastructures
 {
     class DynamicSetException : public std::exception {};
+    class DynamicSetRangeException : public DynamicSetException {};
     class DynamicSetOverflowException : public DynamicSetException {};
     class DynamicSetUnderflowException : public DynamicSetException {};
     class DynamicSetOperationNotImplementedException : public DynamicSetException {};

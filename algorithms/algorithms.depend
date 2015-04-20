@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1426702053 source:/home/mdeluca/training/interviewprep-cpp/trunk/algorithms/Common.cpp
+1428278056 source:/home/mdeluca/training/interviewprep-cpp/trunk/algorithms/Common.cpp
 	"Common.h"
 
-1426689284 /home/mdeluca/training/interviewprep-cpp/trunk/algorithms/Common.h
+1428278056 /home/mdeluca/training/interviewprep-cpp/trunk/algorithms/Common.h
 	<sys/time.h>
 	<stddef.h>
 
@@ -18,9 +18,9 @@
 	"Heap.h"
 	"BinaryTree.h"
 
-1426943691 /home/mdeluca/training/interviewprep-cpp/trunk/algorithms/Sort.h
+1428278056 /home/mdeluca/training/interviewprep-cpp/trunk/algorithms/Sort.h
 
-1426947903 source:/home/mdeluca/training/interviewprep-cpp/trunk/algorithms/Sort.cpp
+1428278056 source:/home/mdeluca/training/interviewprep-cpp/trunk/algorithms/Sort.cpp
 	<iostream>
 	<iomanip>
 	<algorithm>
@@ -29,33 +29,39 @@
 	"Sort.h"
 	"Common.h"
 
-1427075560 source:/home/mdeluca/training/interviewprep-cpp/trunk/algorithms/DataStructures.cpp
+1428278056 source:/home/mdeluca/training/interviewprep-cpp/trunk/algorithms/DataStructures.cpp
 	<iostream>
 	<algorithm>
 	"DataStructures.h"
 
-1427075023 /home/mdeluca/training/interviewprep-cpp/trunk/algorithms/DataStructures.h
+1428326877 /home/mdeluca/training/interviewprep-cpp/trunk/algorithms/DataStructures.h
 	<exception>
 
-1428234010 /home/mdeluca/training/interviewprep-cpp/trunk/algorithms/Heap.h
+1428278056 /home/mdeluca/training/interviewprep-cpp/trunk/algorithms/Heap.h
 	"DataStructures.h"
 	"cppunit/Test.h"
 	"cppunit/TestFixture.h"
 
-1428134685 source:/home/mdeluca/training/interviewprep-cpp/trunk/algorithms/Heap.cpp
+1428278056 source:/home/mdeluca/training/interviewprep-cpp/trunk/algorithms/Heap.cpp
 	"Heap.h"
 	"cppunit/TestCaller.h"
 	"cppunit/TestSuite.h"
 	"cppunit/TestAssert.h"
 
-1428234255 source:/home/mdeluca/training/interviewprep-cpp/trunk/algorithms/BinaryTree.cpp
+1428354525 source:/home/mdeluca/training/interviewprep-cpp/trunk/algorithms/BinaryTree.cpp
 	"BinaryTree.h"
 	"cppunit/TestCaller.h"
 	"cppunit/TestSuite.h"
 	"cppunit/TestAssert.h"
+	<iostream>
+	<algorithm>
 
-1428238428 /home/mdeluca/training/interviewprep-cpp/trunk/algorithms/BinaryTree.h
+1428354451 /home/mdeluca/training/interviewprep-cpp/trunk/algorithms/BinaryTree.h
 	"DataStructures.h"
 	"cppunit/Test.h"
 	"cppunit/TestFixture.h"
+	<iostream>
+	<iomanip>
+	<sstream>
+	<deque>
 
