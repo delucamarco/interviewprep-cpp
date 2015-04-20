@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1429377687 source:/home/mdeluca/training/cpp/interviewPrep/main.cpp
+	"morgan.h"
+
+1429189427 /home/mdeluca/training/cpp/interviewPrep/bnp.h
+	<vector>
+
+1429189401 source:/home/mdeluca/training/cpp/interviewPrep/bnp.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+	"bnp.h"
+
+1429370591 source:/home/mdeluca/training/cpp/interviewPrep/engine.cpp
+	<iostream>
+	"engine.h"
+
+1429191791 /home/mdeluca/training/cpp/interviewPrep/engine.h
+	<iostream>
+	<exception>
+
+1429385336 /home/mdeluca/training/cpp/interviewPrep/morgan.h
+	<iostream>
+	<ext/hash_map>
+	<queue>
+	<vector>
+
+1429385501 source:/home/mdeluca/training/cpp/interviewPrep/morgan.cpp
+	<iostream>
+	"morgan.h"
+
